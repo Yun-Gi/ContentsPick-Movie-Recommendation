@@ -8,6 +8,7 @@ import '../screens/sign_up_screen.dart';
 import '../uikit/widgets/sub_title.dart';
 import '../uikit/widgets/top_bar.dart';
 import '../screens/profile_screen.dart'; // 마이페이지로 이동하기 위한 import 추가
+import '../constants/api_config.dart';
 
 class LoginScreen extends StatelessWidget {
   final idController = TextEditingController(); // 사용자 ID 입력
@@ -159,7 +160,7 @@ class LoginScreen extends StatelessWidget {
   Future<Map<String, dynamic>?> loginUser(String id, String password) async {
     try {
       final response = await http.post(
-        Uri.parse('https://contentspick.site/api/users/login'), // 로그인 API URL
+        Uri.parse('${ApiConfig.baseUrl}/api/users/login'), // 로그인 API URL
         headers: {'Content-Type': 'application/json'},
         body: json.encode({
           'id': id, // 사용자가 입력한 ID

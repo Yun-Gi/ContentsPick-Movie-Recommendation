@@ -4,6 +4,7 @@ import 'dart:convert';
 import '../../constants/colors.dart';
 import '../../uikit/widgets/top_bar.dart';
 import '../login_screen.dart';
+import '../../constants/api_config.dart';
 
 class PasswordResetStep3 extends StatelessWidget {
   final String userId;
@@ -33,7 +34,7 @@ class PasswordResetStep3 extends StatelessWidget {
 
     try {
       final response = await http.post(
-        Uri.parse('https://contentspick.site/api/users/reset-password'),
+        Uri.parse('${ApiConfig.baseUrl}/api/users/login'),
         headers: {'Content-Type': 'application/json; charset=UTF-8'},
         body: json.encode({
           'id': userId,

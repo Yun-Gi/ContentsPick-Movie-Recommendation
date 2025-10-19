@@ -1,10 +1,11 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import '../model/review_model.dart';
+import '../constants/api_config.dart';
 
 class MovieReviewData {
-  final String baseUrl = 'https://contentspick.site/api/movie-reviews';
-
+  final String baseUrl = '${ApiConfig.baseUrl}/api/movie-reviews';
+  
   Future<List<MovieReview>> fetchAllReviews() async {
     final response = await http.get(Uri.parse(baseUrl));
     if (response.statusCode == 200) {

@@ -7,6 +7,7 @@ import '../uikit/widgets/top_bar.dart';
 import '../data/req/REQ_L001.dart';
 import '../data/user_data.dart';
 import '../screens/login_screen.dart';
+import '../constants/api_config.dart';
 
 class SignUpScreen extends StatefulWidget {
   @override
@@ -72,7 +73,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
     try {
       final response = await http.post(
-        Uri.parse('https://contentspick.site/api/users'),
+        Uri.parse('${ApiConfig.baseUrl}/api/users/login'),
         headers: {'Content-Type': 'application/json'},
         body: json.encode({
           'id': reqL001.id,

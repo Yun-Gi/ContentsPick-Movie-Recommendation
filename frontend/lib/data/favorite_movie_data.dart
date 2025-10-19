@@ -1,9 +1,10 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import '../model/favorite_movie_model.dart';
+import '../constants/api_config.dart';
 
 class FavoriteMovieData {
-  final String baseUrl = 'https://contentspick.site/api/movie-favorite-lists';
+  final String baseUrl = '${ApiConfig.baseUrl}/api/movie-favorite-lists';
 
 
   Future<List<FavoriteMovie>> fetchFavoriteMovies(String userId) async {

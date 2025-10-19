@@ -2,9 +2,10 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 import '../model/movie_watch_history.dart';
+import '../constants/api_config.dart';
 
 class MovieWatchHistoryData {
-  final String baseUrl = 'https://contentspick.site/api/movie-watch-histories';
+  final String baseUrl = '${ApiConfig.baseUrl}/api/movie-watch-histories';
 
   Future<List<MovieWatchHistory>> fetchMovieWatchHistories(String userId) async {
     final response = await http.get(Uri.parse('$baseUrl/user/$userId'));

@@ -3,9 +3,10 @@ import 'package:http/http.dart' as http;
 import '../SharedPreference.dart';
 import '../uiState/profile/User.dart';
 import '../data/req/REQ_L001.dart';
+import '../constants/api_config.dart';
 
 class UserData {
-  final String baseUrl = 'https://contentspick.site/api/users';
+  final String baseUrl = '${ApiConfig.baseUrl}/api/users';
 
   Future<User> login(REQ_L001 reqL001) async {
     final response = await http.post(
