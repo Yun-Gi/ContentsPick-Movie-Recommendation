@@ -61,7 +61,7 @@ git clone https://github.com/Yun-Gi/ContentsPick-Movie-Recommendation.git
 
 # 2. 데이터베이스 설정 (MySQL)
 MySQL을 실행하고 'content_pick' 스키마를 생성합니다.
-server/src/resources/application.properties 파일에서 DB 접속 정보를 본인 환경에 맞게 수정합니다.
+backend/src/resources/application.properties 파일에서 DB 접속 정보를 본인 환경에 맞게 수정합니다.
 
 # 3. 데이터 수집
 crawling폴더로 이동하여 의존성을 설치하고 크롤러를 실행해 DB에 초기 데이터를 적재합니다.
