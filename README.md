@@ -46,7 +46,7 @@ Contents Pick은 다양한 OTT 서비스 속에 분산된 컨텐츠 정보를 �
 - **Backend:** `Java`, `Spring Boot`, `Spring Data JPA`
 - **Frontend:** `Flutter`
 - **Database:** `MySQL`
-- **Data Collection:** Python
+- **Data Collection:** `Python`
 - **APIs:** `TMDB API`
 <br>
 
