@@ -1,3 +1,4 @@
+[🇰🇷 한국어(Korean)](README.md) | [🇯🇵 日本語(Japanese)](README_ja.md)
 # 🚀 ContentsPick
 
 > 사용자의 성향에 맞는 컨텐츠를 추천해주는 웹사이트입니다. 
